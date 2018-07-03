@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CCTV 5 LIVE STREAM (AUDIO ONLY)</title>
+    <title>CCTV 5 LIVE STREAM</title>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 
@@ -11,12 +11,18 @@
             background-color: rgba(180,120,120,0.3);
             font-family: "Source Sans Pro", "Roboto", sans-serif;
         }
+        p {
+            margin-top: 5em;
+        }
+        
         a {
             text-decoration: none;
             color: deepskyblue;
             font-size: 1.75em;
             text-shadow: 1px 1px;
         }
+        
+    
 
         body, html {
           height:100%
@@ -40,7 +46,7 @@
 
     <div class = "player">
         <div id="player" ></div>
-        <p><a href="./index.html" >Switch to VIDEO mode</a></p>
+        <p><a href="./audio01.html" >Switch to AUDIO ONLY mode</a></p>
     </div>
         
 
@@ -52,13 +58,12 @@
 
 <script>
     var player = new Clappr.Player({
-        source: "https://tv6.ime.moe/hls/cctv5hd.m3u8",
+        source: "https://tv6.ime.moe/hls/cctv5.m3u8",
         poster:"http://static.dnaindia.com/sites/default/files/styles/full/public/2018/06/10/685006-617595-2018-fifa-world-cup-russia.jpg",
-        audioOnly: true,
+        autoPlay: true,
         parentId: "#player"
     });
     
-
 </script>
 
 </body>
